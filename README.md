@@ -185,7 +185,7 @@ How can you use `_.map()` to your advantage here?
 
 ---
 
-### TODO 5 : Populate the Top Rated List
+### TODO 5 : Populate the General Recordings List
  
 For this **TODO**, you must assemble a new `<section>` and `<ul>` for Billy's general recordings data. Unlike **TODO 4**, there is yet a section or unordered list in the DOM for the recordings, so you must use jQuery to create those elements, too.
 
