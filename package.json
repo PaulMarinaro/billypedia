@@ -3,13 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "chai": "~1.8.0",
     "cheerio": "^0.22.0",
+    "expect.js": "^0.3.1",
+    "express": "^4.15.3",
     "jquery": "^3.2.1",
     "mocha": "2.0.1",
-    "request": "^2.81.0"
+    "node-phantom": "^0.2.5",
+    "phantom": "^4.0.3",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3",
+    "zombie": "^5.0.5"
   },
   "scripts": {
-    "test": "mocha ./test/index.spec.js"
+    "test": "mocha -t ./test/index.spec.js"
   }
 }
