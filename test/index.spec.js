@@ -51,7 +51,7 @@ describe('Billypedia', function(){
     browser.assert.attribute('#section-top-rated > div#image-container-top-rated > img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
     data.discography.topRated.forEach(function(album, index) {
       browser.click(`#section-top-rated > ul > *:nth-of-type(${index + 1})`);
-      browser.assert.attribute('#section-top-rated > div#image-container-top-rated > img', 'src', album.art, 'Make sure your <img> is wrapped in a <div> with the ID "section-top-rated"');
+      browser.assert.attribute('#section-top-rated > div#image-container-top-rated > img', 'src', album.art, 'Make sure your <img>\'s src updates dymanically');
     })
     done();
   });
@@ -81,7 +81,7 @@ describe('Billypedia', function(){
     browser.assert.attribute('#section-recordings > div#image-container-recording > img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
     data.discography.recordings.forEach(function(album, index) {
       browser.click(`#section-recordings > ul > *:nth-of-type(${index + 1})`);
-      browser.assert.attribute('#section-recordings > div#image-container-recording > img', 'src', album.art, 'Make sure your <img> is the child of a tag with the ID "section-recordings"');
+      browser.assert.attribute('#section-recordings > div#image-container-recording > img', 'src', album.art, 'Make sure your image\'s src updates dymanically');
     })
     done();
   });
