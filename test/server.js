@@ -12,4 +12,4 @@ app.listen(3000, () => {
 	console.log('Running on http://localhost:3000');
 });
 
-app.use(express.static(path.join(__dirname, '../.master')));
+app.use(express.static(path.join(__dirname, '../')));
