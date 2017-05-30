@@ -81,64 +81,64 @@ Let's start with some simple exercises right on our index page.  **In the DevToo
 #### Select and modify elements
 
 1. Select all divs and change their text color to red:
-    
+
     ```javascript
     $('div').css('color', 'red');
     ```
-    
+
 2. Change all the div text color back to black:
-    
+
     ```javascript
     $('div').css('color', 'black');
     ```
-    
+
 3. Change the background of the section quotes to grey with rounded corners.
-    
+
     ```javascript
     $('#section-quotes').css('background-color', 'grey').css('border-radius', '4px');
     ```
-    
+
 4. Change the color of the quotes heading to white and give it some padding:
-    
+
     ```javascript
     $('.heading-quotes').css('color', 'white').css('padding-left', '10px');
     ```
-    
+
 5. Change all the `.quote` class paragraphs to be text color white and font-style of italic:
-    
+
     ```javascript
     $('.quote').css('color', 'white').css('font-style', 'italic');
     ```
-    
+
 6. Give the div with id quotes some padding:
-    
+
     ```javascript
     $('#quotes').css('padding-right', '10px').css('padding-left', '10px');
     $('#quotes:last-child').css('padding-bottom', '4px');
     ```
 ---
-    
+
 #### Move, replace, and remove elements
 
 1. Move the section quotes to the top of the div with id sections:
-    
+
     ```javascript
     $('#section-quotes').prependTo('#sections');
     ```
-    
+
 2. Change an HTML attribute by swaping out the `src` of the image tag:
-    
+
     ```javascript
     $('#image-billy').attr('src', 'images/billy/billy-1.jpg');
     ```
-    
+
 3. Remove the stuff about Billy's divorce!
-    
+
     ```javascript
     $('#section-bio p:last-child').remove();
     ```
 ---
-    
+
 #### Create and add elements
 
 Creating DOM elements with jQuery, we provide a String representing the type of element we want to create. The string must include the element symbols:
@@ -157,6 +157,8 @@ Above, when we created the `<section>` element, we've yet to add it to the DOM. 
 Let's get to work dynamically creating, structuring, styling and adding some elements Billypedia page!
 
 Open up the `index.js` file of the billypedia project, and follow the TODO's below to build out the UI from the loaded JSON data.
+
+**It is very important as you create your new elements that you create them as the proper HTML tags, and provide them the ids and classes listed in the directions. **
 
 ---
 
@@ -186,16 +188,18 @@ How can you use `_.map()` to your advantage here?
 ---
 
 ### TODO 5 : Populate the General Recordings List
- 
-For this **TODO**, you must assemble a new `<section>` and `<ul>` for Billy's general recordings data. Unlike **TODO 4**, there is yet a section or unordered list in the DOM for the recordings, so you must use jQuery to create those elements, too.
 
-a. Create a recordings `<section id="section-recordings">` and add it below the section for top rated recordings in the sidebar. How can you acheive this with jQuery?
+For this **TODO**, you must assemble a new `<section>` and `<ul>` for Billy's general recordings data. Unlike **TODO 4**, there is not a section or unordered list in the DOM for the recordings, so you must use jQuery to create those elements, too.
+
+a. Create a recordings `<section id="section-recordings">` and add it below the section for top rated recordings in the sidebar. How can you achieve this with jQuery?
 
 b. Create a `<ul id="list-recordings">`, style it, and add it to the `<section id="section-recordings">`.
 
 c. Add a styled `<li class="recording">` for every recording in the recordings Array. What lodash methods can help you here?
 
-d. Add CSS styling rules to the `css/site.css` file to style the list items. Can these style rules apply to list items in both the top rated and recordings lists? How can you acheive this with CSS selectors/rules and jQuery?
+d. Add a separate `<div>` for the title, artist, release, and year of each recording. Give them a class based on their key in the object.
+
+e. Add CSS styling rules to the `css/site.css` file to style the list items. Can these style rules apply to list items in both the top rated and recordings lists? How can you achieve this with CSS selectors/rules and jQuery?
 
 **The resulting HTML should look something like this:**
 
@@ -217,7 +221,7 @@ d. Add CSS styling rules to the `css/site.css` file to style the list items. Can
 
 ### TODO 6 : Create Images for Recording Lists
 
-Use jQuery to add an image to the top of the sections for top rated and recordings. By default, show the image that corresponds to the first recording in each list.  
+Use jQuery to add an image to the top of the sections for top rated and recordings. Each `<img>` should be the child of a `<div>` with the id "image-container-xxx", where "xxx" is either "top-rated" or "recording". By default, show the image that corresponds to the first recording in each list.  
 
 **The resulting HTML should look something like this:**
 
@@ -248,12 +252,12 @@ You also have available to you a preloader, called a pacifier.  See if you can p
 const pacifier = opspark.makePacifier($('#image-container-billy')[0]);
 
 // stop the pacifier and remove it from the DOM //
-pacifier.stop(); 
+pacifier.stop();
 ```
 
 ---
 
-### TODO 8 : Dynamically Swap Recording Images 
+### TODO 8 : Dynamically Swap Recording Images
 
 Build out a feature for the list items of both the top rated and recordings lists such that when the user clicks on one of the `<li>`, we swap out the source of the image for the feature based on the `art` url associated with the recording.
 

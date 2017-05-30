@@ -47,7 +47,7 @@ $(document).ready(function() {
 
         const $sectionRecordings = $('<section>').attr('id', 'section-recordings').addClass('recordings');
         const $headerRecordings = $('<header>').addClass('header-recordings').text('Recordings');
-        const $listRecordings = $('<ul>').addClass('list-recordings').append(recordingsListItems);
+        const $listRecordings = $('<ul>').attr('id', 'list-recordings').append(recordingsListItems);
         const $imageContainerRecording = $('<div>').attr('id', 'image-container-recording').addClass('image-container');
         $imageContainerRecording.append(createImage(_.first(recordings).art));
 
