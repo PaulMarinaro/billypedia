@@ -158,7 +158,7 @@ Let's get to work dynamically creating, structuring, styling and adding some ele
 
 Open up the `index.js` file of the billypedia project, and follow the TODO's below to build out the UI from the loaded JSON data.
 
-**It is very important as you create your new elements that you create them as the proper HTML tags, and provide them the ids and classes listed in the directions. **
+### **It is very important as you create your new elements that you create them as the proper HTML tags, and provide them the ids and classes listed in the directions. **
 
 ---
 
