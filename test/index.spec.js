@@ -12,7 +12,6 @@ describe('Billypedia', function(){
   });
 
   it('should have a title Billypedia', function(done){
-    // console.log(browser.text('title'));
     browser.assert.text('title', 'Billypedia');
     done();
   });
@@ -46,9 +45,8 @@ describe('Billypedia', function(){
   it('should change top rated album image when clicking an album name', function(done){
     const src = num => data.discography.topRated[num].art;
     browser.assert.elements('#section-top-rated > div', 1, 'Make sure your "section-top-rated" list has a <div>');
-    browser.assert.elements('#section-top-rated > div#image-container-top-rated', 1, 'Make sure your <div> has the ID "image-container-top-rated"');
-    browser.assert.elements('#section-top-rated > div > img', 1, 'Make sure your <img> is wrapped in a <div>');
-    browser.assert.attribute('#section-top-rated > div#image-container-top-rated > img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
+    browser.assert.elements('#section-top-rated img', 1, 'Make sure your <img> is in the "#section-top-rated" section');
+    browser.assert.attribute('#section-top-rated img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
     data.discography.topRated.forEach(function(album, index) {
       browser.click(`#section-top-rated > ul > *:nth-of-type(${index + 1})`);
       browser.assert.attribute('#section-top-rated > div#image-container-top-rated > img', 'src', album.art, 'Make sure your <img>\'s src updates dymanically');
@@ -76,9 +74,8 @@ describe('Billypedia', function(){
   it('should change recordings album image when clicking an album name', function(done){
     const src = num => data.discography.recordings[num].art;
     browser.assert.elements('#section-recordings > div', 1, 'Make sure your "section-recordings" list has a <div>');
-    browser.assert.elements('#section-recordings > div#image-container-recording', 1, 'Make sure your <div> has the ID "image-container-recording"');
-    browser.assert.elements('#section-recordings > div > img', 1, 'Make sure your <img> is wrapped in a <div>');
-    browser.assert.attribute('#section-recordings > div#image-container-recording > img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
+    browser.assert.elements('#section-recordings img', 1, 'Make sure your <img> is inside the "#section-recordings" section');
+    browser.assert.attribute('#section-recordings img', 'src', src(0), 'Make sure the src for your <img> defaults to the first image in the list');
     data.discography.recordings.forEach(function(album, index) {
       browser.click(`#section-recordings > ul > *:nth-of-type(${index + 1})`);
       browser.assert.attribute('#section-recordings > div#image-container-recording > img', 'src', album.art, 'Make sure your image\'s src updates dymanically');

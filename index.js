@@ -10,7 +10,7 @@ $(document).ready(function() {
         // EXAMPLE: Looping over top rated recordings; replace with your code //
         let topRated = data.discography.topRated;
         _.forEach(topRated, function(recording) {
-            console.log(recording);
+            // console.log(recording);
         });
 
 
