@@ -13,5 +13,3 @@ app.listen(3000, () => {
 });
 
 app.use(express.static(path.join(__dirname, '../')));
-
-console.log('hey')
