@@ -11,6 +11,9 @@
     "zombie": "^5.0.5"
   },
   "scripts": {
-    "test": "mocha --use_strict -t --reporter list ./test/index.spec.js"
+    "test": "mocha --use_strict -t ./test/index.spec.js"
+  },
+  "devDependencies": {
+    "mocha-clean": "^1.0.0"
   }
 }
