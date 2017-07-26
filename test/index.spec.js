@@ -3,7 +3,7 @@ var Browser = require('zombie');
 var browser = new Browser();
 var data = require('../data.json');
 
-const server = 'http://localhost:3000/';
+const server = 'http://localhost:7777/';
 
 describe('Billypedia', function(){
 
