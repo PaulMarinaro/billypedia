@@ -1,0 +1,19 @@
+{
+  "name": "Billypedia",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "~1.8.0",
+    "express": "^4.15.3",
+    "mocha": "^3.1.0",
+    "underscore": "^1.8.3",
+    "zombie": "^5.0.5"
+  },
+  "scripts": {
+    "test": "mocha --use_strict -t ./test/index.spec.js"
+  },
+  "devDependencies": {
+    "mocha-clean": "^1.0.0"
+  }
+}
