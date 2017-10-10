@@ -13,7 +13,7 @@ const server = `http://localhost:${PORT}/`;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../')));
-app.listen(PORT, () => console.log(`Running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Running on ${server}`));
 
 describe('Billypedia', function(){
 
