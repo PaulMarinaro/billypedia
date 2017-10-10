@@ -1,9 +1,19 @@
-var _ = require('underscore');
-var Browser = require('zombie');
-var browser = new Browser();
-var data = require('../data.json');
+'use strict';
+const path = require('path');
+const _ = require('underscore');
+const Browser = require('zombie');
+const express = require('express');
+const data = require('../data.json');
+const bodyParser = require('body-parser');
 
-const server = 'http://localhost:7777/';
+const PORT = 7777;
+const app = express();
+const browser = new Browser();
+const server = `http://localhost:${PORT}/`;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../')));
+app.listen(PORT, () => console.log(`Running on ${server}`));
 
 describe('Billypedia', function(){
 
