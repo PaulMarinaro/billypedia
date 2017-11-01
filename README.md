@@ -193,7 +193,7 @@ For this **TODO**, you must assemble a new `<section>` and `<ul>` for Billy's ge
 
 a. Create a recordings `<section id="section-recordings">` and add it below the section for top rated recordings in the sidebar. How can you achieve this with jQuery?
 
-b. Create a `<ul id="list-recordings">`, style it, and add it to the `<section id="section-recordings">`.
+b. Create a `<ul id="list-recordings" class="list-recordings">`, style it, and add it to the `<section id="section-recordings">`.
 
 c. Add a styled `<li class="recording">` for every recording in the recordings Array. What lodash methods can help you here?
 
@@ -205,7 +205,7 @@ e. Add CSS styling rules to the `css/site.css` file to style the list items. Can
 
 ```html
 <section id="section-recordings">
-  <ul id="list-recordings">
+  <ul id="list-recordings" class="list-recordings">
       <li class="recording">
           <div class="title">Title: Eastern Rebellion</div>
           <div class="artist">Artist: Cedar Walton</div>
